@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>MIMAROPA</title>
+<style>
+body {
+  font-family: Cambria:
+  background-color: #B0D1F6;
+}
+ 
+h2 {
+text-align: center;
+}
+  
+/* style the tab */
+.tab {
+  display: flex;
+  justify-content: center
+  flex-wrap: wrap;
+  background-color: #16A2EB;
+  border: 2px solid #7A7F84;
+}
+  
+/* style the buttons inside the tab */
+.tab button {
+  background-color: inherit;
+  border: none;
+  outline: none;
+  cursor: pointe
+  padding: 14px 16px;
+  font-size: 18px;
+  transition: background-color 0.3s, color 0.3s;
+  flex-grow: 1;
+  text-align: center;
+}
+  
+/*Change background color of buttons on hover */
+  tab button:hover {
+  background-color: #066EA4;
+  color: white;
+}
+    
+/* Active tab */
+.tab button.active {
+  background-color: #ccc;
+}
+  
+/* Tab content */
+.tabcontent {
+  display: none;
+  padding: 6px 12px;
+  border-top: none;
+}
+</style>
+</head>
+
+<body>
+
+<h2>The Provinces of MIMAROPA</h2>
+
+<div class="tab">
+  <button class="tablinks" onclick="openProv (event, 'Mindoro')">Mindoro</button>
+  <button class="tablinks" onclick="openProv (event, 'Marinduque')">Marinduque</button> <button class="tablinks" onclick="openProv (event, Romblon')">Romblon</button>
+  <button class="tablinks" onclick="openProv (event, 'Palawan')">Palawan</button>
+</div
+
+<div id="Mindoro" class="tabcontent"
+  <h3>Mindoro</h3>
+ <p>The seventh largest and eighth-most populous island in the Philippines. With a total land
+area of 10,571 km<sup>2</sup> (4,082 sq.mi) and has a population of 1,408,454 as of 2020 census. 
+It is located off the southwestern coast of Luzon and northeast of Palawan. Mindoro is divided
+into two provinces: Occidental Mindoro and Oriental Mindoro. San Jose is the largest settlement
+on the island with a total population of 143,430 inhabitants as of 2015.</p>
+<p>The economy of Mindoro is largely based on agriculture. Products consist of a wide variety of
+fruits, such as citrus, bananas, lanzones, rambutan and coconuts, grains (rice and corn),
+sugarcane, peanuts, fish (catfish, milkfish and tilapia), livestock and poultry.</p>
+</div>
+
+<div id="Marinduque" class="tabcontent">
+  <h3>Marinduque</h3>
+ <p>An island province in the Philippines located in Southwestern Tagalog Region of Mimaropa,
+formerly designated as Region IV-B. Its capital is the municipality of Boac. Marinduque lies
+between Tayabas Bay the north and Sibuyan Sea to the south. It is west of the Bondoc
+Peninsula of Quezon province; east of Mindoro Island; and north of the island province of nombien
+Romblon. Some parts of the Verde Island Passage, the center of world's marine hindiver 
+and a protected marine area. also within Marinduque's provincial water.</p>
+<p>The province of Marinduque was ranked number 1 by the Philippine National Police and Philippine
+Security Forces as the 2013 Most Peaceful Province of the country due to its low crime rate
+statistics alternately ranking with the province of Batanes yearly. Furthermore, for almost
+200 years, the province is home to one of the oldest religious festivals of the country, the
+Moriones celebrated annually every Holy Week.</p>
+</div>
+
+<div id="Romblon" class="tabcontent">
+  <h3>Romblon</h3>
+ <p>An archipelagic province of the Philippine located in the Mimaropa region. Its main islands
+include Tablas, the largest, which covers nine municipalities; Sibuyan with its three towns; as
+well as the smaller island municipalities of Corcuera, Banton, Concepcion, San Jose, and the
+municipality of the same name (which also serves as the provincial capital). The province lies
+south of Marinduque and Quezon, east of Oriental Mindoro, north of Aklan and Capiz, and west of
+Masbate. According to the 2020 census, it has a total population of 308,985.</p>
+<p>Romblon is strategically situated at the center of the Philippine archipelago. Geographically
+part of the Visayas, it is composed of three major islands (Tablas, Sibuyan and Romblon) and 17
+smaller islands. It is surrounded by deep waters, and is bounded by Masbate in the east, Mindoro in the west
+in the west, Marinduque in the north and Panay in the south.</p>
+</div>
+  
+<div id="Palawan" class="tabcontent">
+  <h3>Palawan</h3>
+ <p>An archipelagic province of the Philippines that is located in the region of Mimaropa.
+It is the largest province in the country in terms of total area of 14,649.73 km&sup2; (5,656.29 sq mi)
+The capital city is Puerto Princesa. Palawan is known as the Philippines' Last Frontier[5] and as
+the Philippines' Best Island.</p>
+<p>The islands of Palawan stretch between Mindoro island in the northeast and Borneo in the
+southwest. It lies between the South China Sea and the Sulu Sea. The province is named after its
+largest island, Palawan island (09°30'N 118°30'E), measuring 450 kilometers (280 mi) long and
+50 kilometers (31 mi) wide. </p>
+</div>
+
+<script>
+function open Prov (evt, provName) {
+  var i, tabcontent, tablinks;tabcontent = document.getElementsByClassName("tabcontent");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
+
+  tablinks = document.getElementsByClassName("tablinks");
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].className = tablinks[i].className.replace("active", "");
+  }
+
+  document.getElementById(provName).style.display = "block";
+  evt.currentTarget.className += "active";
+}
+</script>
+
+</body>
+</html>
