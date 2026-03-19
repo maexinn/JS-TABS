@@ -4,7 +4,7 @@
 <title>MIMAROPA</title>
 <style>
 body {
-  font-family: Cambria:
+  font-family: Cambria;
   background-color: #B0D1F6;
 }
  
@@ -15,7 +15,7 @@ text-align: center;
 /* style the tab */
 .tab {
   display: flex;
-  justify-content: center
+  justify-content: center;
   flex-wrap: wrap;
   background-color: #16A2EB;
   border: 2px solid #7A7F84;
@@ -26,7 +26,7 @@ text-align: center;
   background-color: inherit;
   border: none;
   outline: none;
-  cursor: pointe
+  cursor: pointer;
   padding: 14px 16px;
   font-size: 18px;
   transition: background-color 0.3s, color 0.3s;
@@ -35,7 +35,7 @@ text-align: center;
 }
   
 /*Change background color of buttons on hover */
-  tab button:hover {
+.tab button:hover {
   background-color: #066EA4;
   color: white;
 }
@@ -60,11 +60,12 @@ text-align: center;
 
 <div class="tab">
   <button class="tablinks" onclick="openProv (event, 'Mindoro')">Mindoro</button>
-  <button class="tablinks" onclick="openProv (event, 'Marinduque')">Marinduque</button> <button class="tablinks" onclick="openProv (event, Romblon')">Romblon</button>
+  <button class="tablinks" onclick="openProv (event, 'Marinduque')">Marinduque</button> 
+  <button class="tablinks" onclick="openProv (event, Romblon')">Romblon</button>
   <button class="tablinks" onclick="openProv (event, 'Palawan')">Palawan</button>
-</div
+</div>
 
-<div id="Mindoro" class="tabcontent"
+<div id="Mindoro" class="tabcontent>
   <h3>Mindoro</h3>
  <p>The seventh largest and eighth-most populous island in the Philippines. With a total land
 area of 10,571 km<sup>2</sup> (4,082 sq.mi) and has a population of 1,408,454 as of 2020 census. 
@@ -118,7 +119,7 @@ largest island, Palawan island (09°30'N 118°30'E), measuring 450 kilometers (2
 </div>
 
 <script>
-function open Prov (evt, provName) {
+function openProv (evt, provName) {
   var i, tabcontent, tablinks;tabcontent = document.getElementsByClassName("tabcontent");
   for (i = 0; i < tabcontent.length; i++) {
     tabcontent[i].style.display = "none";
@@ -126,11 +127,11 @@ function open Prov (evt, provName) {
 
   tablinks = document.getElementsByClassName("tablinks");
   for (i = 0; i < tablinks.length; i++) {
-    tablinks[i].className = tablinks[i].className.replace("active", "");
+    tablinks[i].className = tablinks[i].className.replace(" active", "");
   }
 
   document.getElementById(provName).style.display = "block";
-  evt.currentTarget.className += "active";
+  evt.currentTarget.className += " active";
 }
 </script>
 
